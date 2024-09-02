@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Step4STEM</title>
+</head>
+<body class="mypage">
+    <nav>
+        <img src="./logo-white.PNG" alt="logo-white">
+        <span class="nav-problem">
+            <h4>문제</h4>
+        </span>
+        <span class="nav-profile">
+            <h4>프로필</h4>
+        </span>
+        <span class="nav-ranking">
+            <h4>순위</h4>
+        </span>
+        <span class="nav-settings">
+            <h4>설정</h4>
+        </span>
+        <span class="nav-box"></span>
+        <span class="nav-signup">
+            <h5>가입하기</h5>
+        </span>
+    </nav>
+    <main class="main">
+        <div class="main-container">
+            <div class="info-container">
+                <img src="assets/img/profile.jpg" class="profile-image" alt="profile-image">
+                <div class="profile-info">
+                    <div class="profile-number">고유번호</div>
+                    <div class="profile-username">닉네임</div>
+                    <textarea class="profile-memo" placeholder="메모를 입력하세요"></textarea>
+                </div>
+                <div class="profile-stats">
+                    <div class="profile-stats-container">
+                        <div class="profile-stats-number">임시_점수</div>
+                        <div class="profile-stats-title">점수</div>
+                    </div>
+                    <div class="profile-stats-container">
+                        <div class="profile-stats-number">임시_맞춘 문제 수</div>
+                        <div class="profile-stats-title">맞춘 문제 수</div>
+                    </div>
+                    <div class="profile-stats-container">
+                        <div class="profile-stats-number">임시_정답률</div>
+                        <div class="profile-stats-title">정답률</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <ul class="tabnav">
+                    <li><a href="#tab01" class="active">푼 문제</a></li>
+                    <li><a href="#tab02">올린 문제</a></li>
+                    <li><a href="#tab03">게시물</a></li>
+                </ul>
+                <div class="tabcontent">
+                    <div id="tab01">푼 문제 내용</div>
+                    <div id="tab02">올린 문제 내용</div>
+                    <div id="tab03">게시물 내용</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.tabcontent > div').hide();
+            $('.tabnav a').click(function () {
+                $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+                $('.tabnav a').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            }).filter(':eq(0)').click();
+        });
+
+    </script>
+</body>
+</html>

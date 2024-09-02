@@ -1,0 +1,220 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+
+.mypage {
+    background-color: #333D51;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: calc(81px + 2.5%) 0 0 0;
+}
+
+nav {
+    height: 35px;
+    width: 94%;
+    padding: 23px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #F4F3EA;
+    color: #333D51;
+    border-radius: 0 0 30px 30px;
+    position: fixed;
+    display: block;
+    transition: padding 0.3s ease-in-out;
+    z-index: 10;
+}
+nav:hover {
+    padding: 28px;
+}
+
+nav img {
+    width: 150px;
+    height: 150%;
+    display: inline-block;
+    object-fit: contain;
+    position: relative;
+    bottom: 30%;
+}
+
+.nav-ranking {
+    position: absolute;
+    right: 255px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.nav-ranking h4 {
+    margin: 0;
+}
+
+.nav-settings {
+    position: absolute;
+    right: 330px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.nav-settings h4 {
+    margin: 0;
+}
+
+.nav-profile {
+    position: absolute;
+    right: 405px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.nav-profile h4 {
+    margin: 0;
+}
+
+.nav-problem {
+    position: absolute;
+    right: 180px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.nav-problem h4 {
+    margin: 0;
+}
+
+.nav-signup {
+    background-color: #333D51;
+    color: #F4F3EA;
+    padding: 10px;
+    border-radius: 30px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+.nav-signup:hover {
+    background-color: #8F5AFF;
+    padding: 13px;
+}
+
+.nav-signup h5 {
+    color: #F4F3EA;
+    margin: 0;
+}
+
+.nav-box {
+    background-color: #333D51;
+    width: 5px;
+    height: 50px;
+    border-radius: 100px;
+    position: absolute;
+    right: 140px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 5%;
+    margin-top: 5%;
+}
+
+.container {
+    width: calc(40% - 30px);
+    padding: 15px;
+    background-color: #F4F3EA;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.subject-name {
+    width: 155px;
+    height: 60px;
+    background-color: #CBD0D8;
+    font-weight:bold;
+    color:#333D51;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom:10px;
+}
+
+.accordion {
+    background-color: #CBD0D8;
+    font-weight:bold;
+    color: #333D51;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+.accordion:hover {
+    background-color: #A8B2BC;
+}
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #CBD0D8;
+    color: #333D51;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+.panel-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.cardcontainer-title {
+    width: 135px;
+    height: 40px;
+    background-color: #CBD0D8;
+    color: #333D51;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.card {
+    width: auto;
+    height: 100px;
+    background-color: #CBD0D8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+.card:hover {
+    background-color: #A8B2BC;
+}
+.card-title {
+    color: #333D51;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-subtitle {
+    color: #A0A4A8;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-subtitle {
+    color: #7B8287;
+}
