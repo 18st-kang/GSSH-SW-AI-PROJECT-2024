@@ -199,9 +199,6 @@ nav img {
     font-weight:lighter;
 }
 .stats-toggle-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: #8F5AFF;
     color: #fff;
     border: none;
@@ -213,6 +210,7 @@ nav img {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 20px; /* 그래프와 수치 옆으로 위치 조정 */
 }
 
 .stats-toggle-btn:hover {
@@ -222,6 +220,7 @@ nav img {
 .stats-toggle-btn i {
     font-size: 20px;
 }
+
 
 /* 그래프 숨기기와 표시 */
 .stats-numeric {
@@ -289,24 +288,28 @@ nav img {
     border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
 }
-@media (max-width: 800px) {
-    .info-container {
-        height: 50%;
-    }
-    .profile-number {
-        font-size: 15px;
-    }
-    .profile-username {
-        font-size: 17px;
-    }
-    .profile-stats-number {
-        font-size: 13px;
-        transition: font-size 0.3s;
-    }
-    .profile-stats-number:hover {
-        font-size: 15px;
-    }
-    .profile-stats-title {
-        font-size: 13px;
-    }
+
+.graph-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.graph-tabs button {
+    background-color: #CBD0D8;
+    color: #333D51;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.graph-tabs button.active {
+    background-color: #5F6C75;
+    color: #ffffff;
+}
+
+.graph-tabs button:hover {
+    background-color: #A8B2BC;
 }
