@@ -6,15 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="static/js/myPage_swiperBundleMin.js">
-    <link rel="stylesheet" href= "static/css/myPage_styles.css">
+    <link rel="stylesheet" href="static/css/myPage_styles.css">
     <title>Step4STEM</title>
-    <style>
-        /* Canvas의 크기를 설정 */
-        #statsChart {
-            width: 100%;
-            height: 400px; /* 원하는 높이로 설정 */
-        }
-    </style>
 </head>
 <body class="mypage">
     <nav>
@@ -46,24 +39,12 @@
                     <textarea class="profile-memo" placeholder="메모를 입력하세요"></textarea>
                 </div>
                 <div class="profile-stats">
-                    <div class="profile-stats-container stats-numeric">
-                        <div class="profile-stats-number">85</div>
-                        <div class="profile-stats-title">점수</div>
+                    <div class="graph-tabs">
+                        <button onclick="updateChart('score')" class="active">점수</button>
+                        <button onclick="updateChart('solved')" class="">맞춘 문제 수</button>
+                        <button onclick="updateChart('accuracy')" class="">정답률</button>
                     </div>
-                    <div class="profile-stats-container stats-numeric">
-                        <div class="profile-stats-number">40</div>
-                        <div class="profile-stats-title">맞춘 문제 수</div>
-                    </div>
-                    <div class="profile-stats-container stats-numeric">
-                        <div class="profile-stats-number">75%</div>
-                        <div class="profile-stats-title">정답률</div>
-                    </div>
-                    
-                    <canvas id="statsChart" style="display: block; box-sizing: border-box; height: 200px; width: 500px;"></canvas>
-                    
-                    <button class="stats-toggle-btn" onclick="toggleStatsView()">
-                        <i class="ri-bar-chart-line"></i>
-                    </button>
+                    <canvas id="statsChart" style="box-sizing: border-box; height: 200px; width: 500px;"></canvas>
                 </div>
             </div>
             <div class="tab">
@@ -73,9 +54,9 @@
                     <li><a href="#tab03">게시물</a></li>
                 </ul>
                 <div class="tabcontent">
-                    <div id="tab01">푼 문제 내용</div>
-                    <div id="tab02">올린 문제 내용</div>
-                    <div id="tab03">게시물 내용</div>
+                    <div id="tab01" style="display: block;">푼 문제 내용</div>
+                    <div id="tab02" style="display: none;">올린 문제 내용</div>
+                    <div id="tab03" style="display: none;">게시물 내용</div>
                 </div>
             </div>
         </div>
