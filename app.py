@@ -1,13 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
-def create_app():
-    app = Flask(__name__)
-    
-    from views.main_views import bp as main_bp
-    app.register_blueprint(main_bp)
-    
-    return app
+app = Flask(__name__)
+
+@app.route('/')
+def mainPage():
+    return render_template('myPage_index.html')
 
 if __name__ == '__main__':
-    app = create_app()
     app.run(debug = True)
