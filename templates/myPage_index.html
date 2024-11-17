@@ -5,29 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/js/myPage_swiperBundleMin.js">
     <link rel="stylesheet" href="static/css/myPage_styles.css">
     <title>Step4STEM</title>
 </head>
 <body class="mypage">
     <nav>
         <img src="./logo-white.PNG" alt="logo-white">
-        <span class="nav-problem">
-            <h4>문제</h4>
-        </span>
-        <span class="nav-profile">
-            <h4>프로필</h4>
-        </span>
-        <span class="nav-ranking">
-            <h4>순위</h4>
-        </span>
-        <span class="nav-settings">
-            <h4>설정</h4>
-        </span>
+        <span class="nav-problem"><h4>문제</h4></span>
+        <span class="nav-profile"><h4>프로필</h4></span>
+        <span class="nav-ranking"><h4>순위</h4></span>
+        <span class="nav-settings"><h4>설정</h4></span>
         <span class="nav-box"></span>
-        <span class="nav-signup">
-            <h5>가입하기</h5>
-        </span>
+        <span class="nav-signup"><h5>가입하기</h5></span>
     </nav>
     <main class="main">
         <div class="main-container">
@@ -41,12 +30,20 @@
                 <div class="profile-stats">
                     <div class="graph-tabs">
                         <button onclick="updateChart('score')" class="active">점수</button>
-                        <button onclick="updateChart('solved')" class="">맞춘 문제 수</button>
-                        <button onclick="updateChart('accuracy')" class="">정답률</button>
+                        <button onclick="updateChart('solved')">맞춘 문제 수</button>
+                        <button onclick="updateChart('accuracy')">정답률</button>
                     </div>
                     <canvas id="statsChart" style="box-sizing: border-box; height: 200px; width: 500px;"></canvas>
+                    <div class="stats-numeric" style="display: none;">
+                        <p>점수: 90</p>
+                        <p>맞춘 문제 수: 40</p>
+                        <p>정답률: 75%</p>
+                    </div>
+                    <button class="stats-toggle-btn"><i class="ri-bar-chart-horizontal-line"></i></button>
                 </div>
             </div>
+
+            <!-- 탭 UI 추가 -->
             <div class="tab">
                 <ul class="tabnav">
                     <li><a href="#tab01" class="active">푼 문제</a></li>
@@ -65,3 +62,4 @@
     <script src="static/js/myPage_main.js"></script>
 </body>
 </html>
+
