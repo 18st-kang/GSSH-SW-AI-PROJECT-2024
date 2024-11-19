@@ -221,11 +221,36 @@ nav img {
     font-size: 20px;
 }
 
-
-/* 그래프 숨기기와 표시 */
 .stats-numeric {
     display: block;
 }
+
+.rank-container {
+    margin-left: 30px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank-image {
+    background-image: url('../img/mypage_rank.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.rank-name {
+    font-size: 40px;
+    color: #BEBEBE;
+    font-weight: bold;
+    text-align: center;
+}
+
 .tab {
     margin-top: 20px;
     height: 55%;
