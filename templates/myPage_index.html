@@ -23,9 +23,9 @@
             <div class="info-container">
                 <img src="static/img/myPage_profile.jpg" class="profile-image" alt="profile-image">
                 <div class="profile-info">
-                    <div class="profile-number">고유번호</div>
-                    <div class="profile-username">닉네임</div>
-                    <textarea class="profile-memo" placeholder="메모를 입력하세요"></textarea>
+                    <div class="profile-number">고유번호: {{ user.id }}</div>
+                    <div class="profile-username">닉네임: {{ user.username }}</div>
+                    <textarea class="profile-memo" placeholder="메모를 입력하세요">{{ user.memo }}</textarea>
                 </div>
                 <div class="profile-stats">
                     <div class="graph-tabs">
@@ -34,17 +34,20 @@
                         <button onclick="updateChart('accuracy')">정답률</button>
                     </div>
                     <canvas id="statsChart" style="box-sizing: border-box; height: 200px; width: 500px;"></canvas>
-                    <div class="stats-numeric" style="display: none;">
-                        <p>점수: 90</p>
-                        <p>맞춘 문제 수: 40</p>
-                        <p>정답률: 75%</p>
+                    <div class="stats-numeric">
+                        {% for p in progress %}
+                            <p>문제 ID: {{ p.problem_id }}</p>
+                            <p>점수: {{ p.score }}</p>
+                            <p>풀이 날짜: {{ p.solved_date }}</p>
+                        {% else %}
+                            <p>풀이 데이터가 없습니다.</p>
+                        {% endfor %}
                     </div>
-                    <button class="stats-toggle-btn"><i class="ri-bar-chart-horizontal-line"></i></button>
+                    
                 </div>
                 <div class="rank-container">
-                    <div class="rank-image"></div>
-                    <div class="rank-name">Silver 3</div>
-                </div>                
+                    <div class="rank-name">{{ user.rank }}</div>
+                </div>                                
             </div>
 
             <!-- 탭 UI 추가 -->
