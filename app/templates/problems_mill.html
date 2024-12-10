@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+
+<head>
+    <link href="static/css/style_mill.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[카테고리] 문제</title> <!--카테고리 : 수1, 수2 등등-->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./logo-white.PNG" alt="logo-white">
+            <a class="nav-problem" href={{ url_for('problem') }}><h4>문제</h4></a>
+            <a class="nav-profile" href="{{ url_for('home') }}"><h4>프로필</h4></a>
+            <span class="nav-ranking"><h4>순위</h4></span>
+            <span class="nav-settings"><h4>설정</h4></span>
+            <span class="nav-box"></span>
+            <a class="nav-signup" href={{ url_for('logout') }}><h5>로그아웃</h5></a>
+        </nav>
+    </header>
+    <div class="maingrid">
+        <span class="left">
+            <div class="problem-upper">
+                <span class="problem-upper-info">
+                    <span class="mill">{{ problem.title }}</span>
+                    <span class="sub">{{ problem.category }}</span>
+                </span>
+                <i class="ri-more-2-fill"></i>
+            </div>
+            <div class="problem-contents"><!--문제, 그림(필요 시), 보기(없으면 생략)-->
+                <div class="problem-container">
+                    <span id="problem">
+                        {{ problem.content }}
+                    </span>
+                </div>
+                <ul class="problem-info">
+                    <hr>
+                    <li class="problem-info-left">
+                        @{{ post_user }}
+                    </li>
+                    <li class="problem-info-right">
+                        <i class="ri-eye-line"></i>
+                        조회수
+                        <span>[13500]</span>
+                        <span class="heart">
+                            <i class="ri-heart-3-line" onclick=""></i>
+                            좋아요
+                            <span id="numHeart">{{ problem.likes }}</span>
+                        </span>
+                        <i class="ri-bookmark-line"></i>
+                        저장
+                        <i class="ri-message-2-line" onclick="switchitems()"></i>
+                        댓글
+                    </li>
+                </ul>
+            </div>
+        </span>
+        <span class="right">
+            <span class="right-top2">
+                <span class="right-top-upper">
+                    댓글
+                    <i class="ri-close-line" onclick="closeComment()"></i>
+                </span><br>
+                <li class="comments"></li>
+                <form id="addComment">
+                    <i class="ri-attachment-2" onclick="document.getElementById('fileInput').click();"></i>
+                    <label for="fileInput">
+                        <input type="file" id="fileInput">
+                    </label>
+                        <textarea type="text" class="commentText"></textarea>
+                    <input type="submit" class="button" value="업로드" />
+                </form>
+            </span>
+        </span>
+    </div>
+</body>
+<script src="script_mill.js"></script>
+
+</html>

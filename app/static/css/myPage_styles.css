@@ -95,6 +95,7 @@ nav img {
     top: 50%;
     transform: translate(0, -50%);
     transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    text-decoration: none;
 }
 .nav-signup:hover {
     background-color: #8F5AFF;
