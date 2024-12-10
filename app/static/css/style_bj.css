@@ -134,9 +134,7 @@ body {
 
 .left {
     margin-left: 20px;
-    color: #F4F3EA;
-    background-color: #333D51;
-    border: #FF0C80 solid 2px;
+    background-color: #F4F3EA;
     border-radius: 35px;
     height: 80vh;
     overflow-x: hidden;
@@ -179,15 +177,6 @@ body {
     border-radius: 60px;
 }
 
-.mill{
-    font-weight: bold;
-    color: #F4F3EA;
-    text-decoration: underline #FF0C80 solid 2px;
-}
-.sub{
-    color: #c0c0c0;
-}
-
 .problem-contents {
     padding: 20px;
     padding-top: 0;
@@ -197,7 +186,10 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     align-items: center;
-    margin-bottom: 25px;
+}
+
+#problem{
+    margin-bottom: 10px;
 }
 
 .problem-container img{
@@ -216,7 +208,7 @@ body {
 }
 
 .problem-info i{
-    color: #F4F3EA;
+    color: #333D51;
     padding: 3px;
     transition: 0.3s;
 }
@@ -247,7 +239,7 @@ body {
 }
 
 #problem {
-    color: #F4F3EA;
+    color: #333D51;
     font-size: large;
     font-weight: 800;
     font-family: Georgia;
@@ -261,11 +253,6 @@ body {
     unicode-range: U+AC00-D7A3;
 }
 
-.right{
-    color: #F4F3EA;
-    background-color: #333D51;
-    border: #FF0C80 2px solid;
-}
 
 .right-top1 {
     position: relative;
@@ -277,7 +264,7 @@ body {
 
 .right-top-upper {
     margin: 30px 30px 14px 30px;
-    color: #F4F3EA;
+    color: #333D51;
     font-weight: bolder;
     font-size: large;
     display: flex;
@@ -292,7 +279,7 @@ body {
 
 .right-top1 i{
     transition: 0.3s;
-    color: #F4F3EA;
+    color: #333D51;
     padding: 3px;
     margin-left: auto;
 }
@@ -308,15 +295,15 @@ body {
 }
 
 .right-top1 textarea {
-    background-color: #333D51;
+    background-color: #CBD0D8;
     padding: 10px;
     margin: 20px;
     width: 80%;
-    height: 10rem;
-    border: #FF0C80 2px solid;
+    height: 15rem;
+    border: 0;
     outline: none;
     border-radius: 15px;
-    color: #F4F3EA;
+    color: #333D51;
     font-weight: bold;
     resize: none;
     flex-shrink: 1;
@@ -325,14 +312,14 @@ body {
 .right-top-upper input[type=submit] {
     padding: 10px;
     border-radius: 15px;
+    margin-left: 10px;
     font-weight: 700;
     font-size: medium;
     border: 3px solid;
     border-color: #FF0C80;
-    margin-left: 10px;
-    color: #F4F3EA;
+    background-color: #F4F3EA;
+    color: #333D51;
     transition: 0.3s;
-    background-color: transparent;
 }
 
 .right-top1 input:hover[type=submit]{
@@ -348,6 +335,11 @@ body {
     display: none;
 }
 
+.submitContainer img{
+    width: 80%;
+    margin: 10px auto;
+}
+
 #submit-preview img{
     margin: auto;
     display: block;
@@ -356,7 +348,7 @@ body {
 
 /*2*/
 .right-top2 i {
-    color: #F4F3EA;
+    color: #333D51;
     padding: 3px;
     transition: 0.3s;
     border-radius: 15px;
@@ -368,7 +360,7 @@ body {
 
 .comments {
     border-radius: 15px;
-    border: #FF0C80 2px solid;
+    border: 0;
     margin: 0 20px 0 20px;
     height: 65%;
     overflow: auto;
@@ -381,12 +373,12 @@ body {
 }
 #addCommment div{
     font-size: small;
-    color: #F4F3EA;
+    color: #333D51;
 }
 
 .comment-row {
-    color: #F4F3EA;
-    font-size: 0.9rem;
+    color: #333D51;
+    font-size: small;
     justify-content: space-between;
     flex-direction: row;
     padding: 20px 20px 0 20px;
@@ -416,8 +408,8 @@ body {
 }
 
 .moreComment-row{
-    color: #F4F3EA;
-    font-size: 0.9rem;
+    color: #333D51;
+    font-size: small;
     justify-content: space-between;
     flex-direction: row;
     padding-bottom: 20px;
@@ -429,12 +421,12 @@ body {
 }
 
 .fileInput {
-    display: block;
+    display: none;
 }
 
 .file-name{
     font-size: small;
-    color: #F4F3EA;
+    color: #333D51;
 }
 
 
@@ -449,15 +441,15 @@ body {
 
 
 .commentText {
-    border: #FF0C80 2px solid;
-    background-color: #333D51;
+    background-color: #CBD0D8;
     width: 55%;
     height: 20%;
     padding: 10px;
     margin-right: 20px;
+    border: 0;
     outline: none;
     border-radius: 15px;
-    color: #F4F3EA;
+    color: #333D51;
     font-weight: bold;
     display: inline-block;
     resize: none;
@@ -466,14 +458,15 @@ body {
 .button {
     display: inline-block;
     outline: none;
-    border: 2px #FF0C80 solid;
+    border: 0;
     border-radius: 10px;
     font-weight: bold;
     text-align: center;
-    background-color: #333D51;
-    color: #F4F3EA;
+    background-color: #CBD0D8;
+    color: #333D51;
     padding: 10px;
 }
+
 
 canvas{
     display: block;

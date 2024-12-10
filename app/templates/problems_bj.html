@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link href="static/css/style_mill.css" rel="stylesheet">
+    <link href="static/css/style_bj.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,15 +36,16 @@
         <span class="left">
             <div class="problem-upper">
                 <span class="problem-upper-info">
-                    <span class="mill">{{ problem.title }}</span>
-                    <span class="sub">{{ problem.category }}</span>
+                    <span>전체 정답률 [--%]</span>
                 </span>
+                <i class="ri-more-2-fill"></i>
             </div>
             <div class="problem-contents"><!--문제, 그림(필요 시), 보기(없으면 생략)-->
                 <div class="problem-container">
                     <span id="problem">
                         {{ problem.content }}
                     </span>
+                    <img src="static/img/problem_image_{{ problem.id }}.png" alt="문제사진">
                 </div>
                 <ul class="problem-info">
                     <hr>
@@ -90,8 +91,10 @@
                     </form>
                 </span>
             </span>
+            </span>
         </span>
     </div>
 </body>
-<script src="script_mill.js"></script>
+<script src="static/js/script_bj.js"></script>
+
 </html>

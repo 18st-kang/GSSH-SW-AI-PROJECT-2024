@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash, request, jsonify
 from sqlalchemy import func
 from flask_login import login_user, login_required, logout_user, current_user
 from app import app, db, login_manager
@@ -22,18 +22,20 @@ def home():
         user = current_user
         return render_template('myPage_index.html', user=user)
     else:
-        return redirect((url_for('login')), user=None)
+        return redirect((url_for('login')))
 
 @app.route('/problem')
-def problem_select():
-    if not current_user:
-        return redirect((url_for('login')), user=None)   
-    elif current_user.is_authenticated:
+def problem():
+    if current_user.is_authenticated:
         user = current_user
-        problem = Problem.query.order_by(func.rand()).first()
+        problem = Problem.query.order_by(func.random()).first()
         post_user = User.query.filter_by(id=problem.posted_by).first()
-        return render_template('problems_mill.html', user=user, problem=problem, post_user=post_user)
-
+        if problem.category == "밀레니엄 난제":
+            return render_template('problems_mill.html', user=user, problem=problem, post_user=post_user)
+        else:
+            return render_template('problems_bj.html', user=user, problem=problem, post_user=post_user)
+    else:
+        return redirect((url_for('login')))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

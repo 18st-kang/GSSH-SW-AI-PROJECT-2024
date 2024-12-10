@@ -10,7 +10,7 @@
 </head>
 <body class="mypage">
     <nav>
-        <img src="./logo-white.PNG" alt="logo-white">
+        <img src="static/img/logo.png" alt="logo-white">
         <a class="nav-problem" href={{url_for('problem')}}><h4>문제</h4></a>
         <a class="nav-profile" href="{{url_for('home')}}"><h4>프로필</h4></a>
         <span class="nav-ranking"><h4>순위</h4></span>
@@ -25,10 +25,10 @@
     <main class="main">
         <div class="main-container">
             <div class="info-container">
-                <img src="static/img/myPage_profile.jpg" class="profile-image" alt="profile-image">
+                <img src="static/img/myPage_profile.png" class="profile-image" alt="profile-image">
                 <div class="profile-info">
-                    <div class="profile-number">고유번호: {{ user.id }}</div>
-                    <div class="profile-username">닉네임: {{ user.username }}</div>
+                    <div class="profile-number">user ID #{{ user.id }}</div>
+                    <div class="profile-username">{{ user.username }}</div>
                     <textarea class="profile-memo" placeholder="메모를 입력하세요">{{ user.memo }}</textarea>
                 </div>
                 <div class="profile-stats">

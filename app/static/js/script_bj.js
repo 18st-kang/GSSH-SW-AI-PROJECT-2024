@@ -1,5 +1,22 @@
 let items_switchitems = [
     `
+    <span class="right-top2">
+        <span class="right-top-upper">
+            댓글
+            <i class="ri-close-line" onclick="closeComment()"></i>
+        </span><br>
+        <li class="comments"></li>
+        <form id="addComment">
+            <i class="ri-attachment-2" onclick="document.getElementById('fileInput').click();"></i>
+            <label for="fileInput">
+                <input type="file" id="fileInput">
+            </label>
+                <textarea type="text" class="commentText"></textarea>
+            <input type="submit" class="button" value="업로드" />
+        </form>
+    </span>
+    `,
+    `
     <span class="right-top1">
         <form id="addSubmit">
             <div class="right-top-upper">
@@ -14,23 +31,6 @@ let items_switchitems = [
                 <textarea type="text" class="submitText"></textarea>
                 <div id="submit-preview"></div>
             </div>
-        </form>
-    </span>
-    `,
-    `
-    <span class="right-top2">
-        <span class="right-top-upper">
-            댓글
-            <i class="ri-close-line" onclick="closeComment()"></i>
-        </span><br>
-        <li class="comments"></li>
-        <form id="addComment">
-            <i class="ri-attachment-2" onclick="document.getElementById('fileInput').click();"></i>
-            <label for="fileInput">
-                <input type="file" id="fileInput">
-            </label>
-                <textarea type="text" class="commentText"></textarea>
-            <input type="submit" class="button" value="업로드" />
         </form>
     </span>
     `
